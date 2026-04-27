@@ -4,8 +4,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import { products } from "@/data/products";
-import { formatPrice, getWhatsAppLink } from "@/lib/utils";
-import { getMarketplaceButtons } from "@/lib/marketplace";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -26,9 +24,64 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: `${product.name} - BLIND`,
       description: product.description,
-      images: product.images.length > 0 ? [product.images[0]] : ["/logo/BLINDLOGO.png"],
+      images: ["/logo/BLINDLOGO.png"],
     },
   };
+}
+
+/** SVG placeholder por categoria - versao grande para pagina do produto */
+function ProductPlaceholder({ category, name }: { category: string; name: string }) {
+  return (
+    <div className="bg-gradient-to-b from-gray-50 to-gray-100 rounded-xl flex flex-col items-center justify-center min-h-[400px] p-10">
+      <svg viewBox="0 0 200 80" fill="none" className="w-[220px] mb-6">
+        {category === "wayfarer" && (
+          <>
+            <rect x="20" y="20" width="65" height="45" rx="6" stroke="#222" strokeWidth="2.5" fill="none" />
+            <rect x="115" y="20" width="65" height="45" rx="6" stroke="#222" strokeWidth="2.5" fill="none" />
+            <path d="M85 38 Q100 48 115 38" stroke="#222" strokeWidth="2.5" fill="none" />
+            <line x1="0" y1="32" x2="20" y2="28" stroke="#222" strokeWidth="2" />
+            <line x1="180" y1="28" x2="200" y2="32" stroke="#222" strokeWidth="2" />
+          </>
+        )}
+        {category === "aviator" && (
+          <>
+            <ellipse cx="55" cy="42" rx="35" ry="28" stroke="#B8860B" strokeWidth="2.5" fill="none" />
+            <ellipse cx="145" cy="42" rx="35" ry="28" stroke="#B8860B" strokeWidth="2.5" fill="none" />
+            <path d="M90 38 Q100 32 110 38" stroke="#B8860B" strokeWidth="2.5" fill="none" />
+            <line x1="0" y1="30" x2="20" y2="34" stroke="#B8860B" strokeWidth="2" />
+            <line x1="180" y1="34" x2="200" y2="30" stroke="#B8860B" strokeWidth="2" />
+          </>
+        )}
+        {category === "redondo" && (
+          <>
+            <circle cx="55" cy="42" r="28" stroke="#222" strokeWidth="2.5" fill="none" />
+            <circle cx="145" cy="42" r="28" stroke="#222" strokeWidth="2.5" fill="none" />
+            <path d="M83 38 Q100 30 117 38" stroke="#222" strokeWidth="2.5" fill="none" />
+            <line x1="0" y1="34" x2="27" y2="36" stroke="#222" strokeWidth="2" />
+            <line x1="173" y1="36" x2="200" y2="34" stroke="#222" strokeWidth="2" />
+          </>
+        )}
+        {category === "quadrado" && (
+          <>
+            <rect x="12" y="16" width="75" height="52" rx="4" stroke="#222" strokeWidth="2.5" fill="none" />
+            <rect x="113" y="16" width="75" height="52" rx="4" stroke="#222" strokeWidth="2.5" fill="none" />
+            <path d="M87 38 Q100 46 113 38" stroke="#222" strokeWidth="2.5" fill="none" />
+            <line x1="0" y1="30" x2="12" y2="28" stroke="#222" strokeWidth="2" />
+            <line x1="188" y1="28" x2="200" y2="30" stroke="#222" strokeWidth="2" />
+          </>
+        )}
+        {category === "esportivo" && (
+          <>
+            <path d="M10 36 Q15 14 55 14 L100 18 L145 14 Q185 14 190 36 Q188 60 145 58 L100 54 L55 58 Q12 60 10 36Z" stroke="#222" strokeWidth="2.5" fill="none" />
+            <line x1="100" y1="18" x2="100" y2="54" stroke="#222" strokeWidth="2" />
+            <line x1="0" y1="34" x2="10" y2="36" stroke="#222" strokeWidth="2" />
+            <line x1="190" y1="36" x2="200" y2="34" stroke="#222" strokeWidth="2" />
+          </>
+        )}
+      </svg>
+      <p className="text-sm font-medium text-gray-400 tracking-wide uppercase">{name}</p>
+    </div>
+  );
 }
 
 export default async function ProdutoPage({ params }: PageProps) {
@@ -36,9 +89,6 @@ export default async function ProdutoPage({ params }: PageProps) {
   const product = products.find((p) => p.slug === slug);
 
   if (!product) notFound();
-
-  const buttons = getMarketplaceButtons(product);
-  const isSoldOut = product.status === "sold_out";
 
   return (
     <>
@@ -61,27 +111,7 @@ export default async function ProdutoPage({ params }: PageProps) {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Imagem */}
-              <div className="bg-gray-50 rounded-xl flex items-center justify-center min-h-[400px]">
-                <div className="text-center p-10">
-                  <svg
-                    viewBox="0 0 120 60"
-                    fill="none"
-                    className="w-[160px] opacity-30 mb-4 mx-auto"
-                  >
-                    <path
-                      d="M15 35C15 25 25 20 35 20H85C95 20 105 25 105 35C105 45 95 45 85 45H35C25 45 15 45 15 35Z"
-                      stroke="#999"
-                      strokeWidth="2"
-                    />
-                    <circle cx="35" cy="32" r="12" stroke="#999" strokeWidth="2" />
-                    <circle cx="85" cy="32" r="12" stroke="#999" strokeWidth="2" />
-                    <line x1="47" y1="32" x2="73" y2="32" stroke="#999" strokeWidth="2" />
-                    <line x1="1" y1="30" x2="15" y2="32" stroke="#999" strokeWidth="2" />
-                    <line x1="105" y1="32" x2="119" y2="30" stroke="#999" strokeWidth="2" />
-                  </svg>
-                  <p className="text-sm text-gray-400">Imagem em breve</p>
-                </div>
-              </div>
+              <ProductPlaceholder category={product.category} name={product.name} />
 
               {/* Info */}
               <div>
@@ -110,13 +140,15 @@ export default async function ProdutoPage({ params }: PageProps) {
                 </p>
 
                 <div className="mb-6">
-                  <p className="text-sm text-gray-400 mb-1">Categoria: {product.category}</p>
-                  <p className="text-sm text-gray-400 mb-1">SKU: {product.sku}</p>
+                  <p className="text-sm text-gray-400 mb-1">
+                    Categoria: {product.category.charAt(0).toUpperCase() + product.category.slice(1)}
+                  </p>
                   {product.colors.length > 0 && (
                     <p className="text-sm text-gray-400 mb-1">
                       Cores: {product.colors.join(", ")}
                     </p>
                   )}
+                  <p className="text-sm text-gray-400 mb-1">Protecao UV400</p>
                   {product.tags.length > 0 && (
                     <div className="flex flex-wrap gap-2 mt-3">
                       {product.tags.map((tag) => (
@@ -131,50 +163,10 @@ export default async function ProdutoPage({ params }: PageProps) {
                   )}
                 </div>
 
-                {/* Preco */}
-                <div className="mb-8">
-                  <p className="text-2xl font-bold">
-                    {product.compareAtPrice && (
-                      <span className="text-base text-gray-400 line-through font-normal mr-2">
-                        {formatPrice(product.compareAtPrice)}
-                      </span>
-                    )}
-                    <span className={product.compareAtPrice ? "text-[#4DA6FF]" : ""}>
-                      {formatPrice(product.price)}
-                    </span>
-                  </p>
+                {/* Aviso de preco */}
+                <div className="bg-gray-50 rounded-lg p-4 text-sm text-gray-500">
+                  Precos e opcoes de compra em breve.
                 </div>
-
-                {/* Botoes */}
-                {isSoldOut ? (
-                  <div className="bg-gray-100 text-gray-500 text-center py-4 rounded-lg font-semibold">
-                    Esgotado
-                  </div>
-                ) : (
-                  <div className="flex flex-col gap-3">
-                    <a
-                      href={getWhatsAppLink(product)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full text-center px-6 py-3.5 bg-[#4DA6FF] text-white font-semibold rounded-lg hover:bg-[#3a8fe0] transition-colors"
-                    >
-                      Tenho interesse
-                    </a>
-                    {buttons
-                      .filter((b) => b.marketplace !== "whatsapp")
-                      .map((btn) => (
-                        <a
-                          key={btn.marketplace}
-                          href={btn.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block w-full text-center px-6 py-3 bg-black text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-colors"
-                        >
-                          {btn.label}
-                        </a>
-                      ))}
-                  </div>
-                )}
               </div>
             </div>
           </div>
