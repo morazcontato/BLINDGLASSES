@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description:
       "Modelos selecionados de óculos de sol. Design moderno, proteção UV e preço acessível.",
     type: "website",
-    images: ["/logo/BLINDLOGO.png"],
+    images: ["/logo/logo.png"],
   },
 };
 

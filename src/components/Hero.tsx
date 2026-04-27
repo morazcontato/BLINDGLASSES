@@ -32,7 +32,7 @@ export default function Hero() {
         </div>
         <div className="flex-1 flex justify-center">
           <Image
-            src="/logo/BLINDLOGO.png"
+            src="/logo/logo.png"
             alt="BLIND Óculos de Sol"
             width={400}
             height={400}

@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-10 mb-8">
           <div>
             <Image
-              src="/logo/BLINDLOGO.png"
+              src="/logo/logo.png"
               alt="BLIND"
               width={100}
               height={32}

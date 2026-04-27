@@ -11,7 +11,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-5 flex items-center justify-between h-[72px]">
         <a href="#" className="flex-shrink-0">
           <Image
-            src="/logo/BLINDLOGO.png"
+            src="/logo/logo.png"
             alt="BLIND"
             width={120}
             height={40}
