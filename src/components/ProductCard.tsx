@@ -1,7 +1,9 @@
 "use client";
 
 import { Product } from "@/data/products";
+import { formatPrice } from "@/lib/utils";
 import Link from "next/link";
+import BuyButton from "./BuyButton";
 
 const badgeStyles: Record<string, string> = {
   novo: "bg-[#4DA6FF]",
@@ -15,7 +17,6 @@ const badgeLabels: Record<string, string> = {
   premium: "Premium",
 };
 
-/** SVG placeholder elegante por estilo de oculos */
 function SunglassesPlaceholder({ category, name }: { category: string; name: string }) {
   return (
     <div className="flex flex-col items-center justify-center py-12 px-5 min-h-[220px] bg-gradient-to-b from-gray-50 to-gray-100">
@@ -71,6 +72,8 @@ function SunglassesPlaceholder({ category, name }: { category: string; name: str
 }
 
 export default function ProductCard({ product }: { product: Product }) {
+  const hasPrice = product.price !== null && product.price > 0;
+
   return (
     <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
       <Link href={`/produto/${product.slug}`} className="block">
@@ -92,13 +95,41 @@ export default function ProductCard({ product }: { product: Product }) {
             {product.name}
           </h3>
         </Link>
-        <p className="text-sm text-gray-500 leading-relaxed">
+        <p className="text-sm text-gray-500 leading-relaxed mb-3">
           {product.description}
         </p>
         {product.colors.length > 0 && (
-          <p className="text-xs text-gray-400 mt-3">
+          <p className="text-xs text-gray-400 mb-4">
             Cores: {product.colors.join(", ")}
           </p>
+        )}
+
+        {/* Preco */}
+        {hasPrice && (
+          <div className="mb-4">
+            <p className="text-xl font-bold">
+              {product.compareAtPrice && (
+                <span className="text-sm text-gray-400 line-through font-normal mr-2">
+                  {formatPrice(product.compareAtPrice)}
+                </span>
+              )}
+              <span className={product.compareAtPrice ? "text-[#4DA6FF]" : ""}>
+                {formatPrice(product.price)}
+              </span>
+            </p>
+          </div>
+        )}
+
+        {/* Botao comprar */}
+        {hasPrice ? (
+          <BuyButton productId={product.id} className="w-full text-sm py-2.5" />
+        ) : (
+          <Link
+            href={`/produto/${product.slug}`}
+            className="block w-full text-center px-4 py-2.5 bg-gray-100 text-gray-600 text-sm font-semibold rounded-lg hover:bg-gray-200 transition-colors"
+          >
+            Ver detalhes
+          </Link>
         )}
       </div>
     </div>

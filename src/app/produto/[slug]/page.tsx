@@ -3,7 +3,9 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
+import BuyButton from "@/components/BuyButton";
 import { products } from "@/data/products";
+import { formatPrice, getWhatsAppLink } from "@/lib/utils";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -29,7 +31,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-/** SVG placeholder por categoria - versao grande para pagina do produto */
 function ProductPlaceholder({ category, name }: { category: string; name: string }) {
   return (
     <div className="bg-gradient-to-b from-gray-50 to-gray-100 rounded-xl flex flex-col items-center justify-center min-h-[400px] p-10">
@@ -90,30 +91,25 @@ export default async function ProdutoPage({ params }: PageProps) {
 
   if (!product) notFound();
 
+  const hasPrice = product.price !== null && product.price > 0;
+
   return (
     <>
       <Header />
       <main>
         <section className="pt-[120px] pb-20">
           <div className="max-w-5xl mx-auto px-5">
-            {/* Breadcrumb */}
             <nav className="text-sm text-gray-400 mb-8">
-              <a href="/" className="hover:text-[#4DA6FF] transition-colors">
-                Inicio
-              </a>
+              <a href="/" className="hover:text-[#4DA6FF] transition-colors">Inicio</a>
               <span className="mx-2">/</span>
-              <a href="/catalogo" className="hover:text-[#4DA6FF] transition-colors">
-                Catalogo
-              </a>
+              <a href="/catalogo" className="hover:text-[#4DA6FF] transition-colors">Catalogo</a>
               <span className="mx-2">/</span>
               <span className="text-black">{product.name}</span>
             </nav>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              {/* Imagem */}
               <ProductPlaceholder category={product.category} name={product.name} />
 
-              {/* Info */}
               <div>
                 {product.badge && (
                   <span
@@ -125,11 +121,7 @@ export default async function ProdutoPage({ params }: PageProps) {
                           : "bg-gradient-to-br from-yellow-700 to-yellow-500"
                     }`}
                   >
-                    {product.badge === "novo"
-                      ? "Novo"
-                      : product.badge === "mais-vendido"
-                        ? "Mais vendido"
-                        : "Premium"}
+                    {product.badge === "novo" ? "Novo" : product.badge === "mais-vendido" ? "Mais vendido" : "Premium"}
                   </span>
                 )}
 
@@ -152,10 +144,7 @@ export default async function ProdutoPage({ params }: PageProps) {
                   {product.tags.length > 0 && (
                     <div className="flex flex-wrap gap-2 mt-3">
                       {product.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded"
-                        >
+                        <span key={tag} className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
                           {tag}
                         </span>
                       ))}
@@ -163,9 +152,43 @@ export default async function ProdutoPage({ params }: PageProps) {
                   )}
                 </div>
 
-                {/* Aviso de preco */}
-                <div className="bg-gray-50 rounded-lg p-4 text-sm text-gray-500">
-                  Precos e opcoes de compra em breve.
+                {/* Preco e compra */}
+                {hasPrice ? (
+                  <div className="mb-8">
+                    <p className="text-3xl font-bold mb-6">
+                      {product.compareAtPrice && (
+                        <span className="text-lg text-gray-400 line-through font-normal mr-2">
+                          {formatPrice(product.compareAtPrice)}
+                        </span>
+                      )}
+                      <span className={product.compareAtPrice ? "text-[#4DA6FF]" : ""}>
+                        {formatPrice(product.price)}
+                      </span>
+                    </p>
+
+                    <div className="flex flex-col gap-3">
+                      <BuyButton productId={product.id} className="w-full" />
+                      <a
+                        href={getWhatsAppLink(product)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full text-center px-6 py-3 border-2 border-black text-black font-semibold rounded-lg hover:bg-black hover:text-white transition-colors"
+                      >
+                        Comprar via WhatsApp
+                      </a>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="bg-gray-50 rounded-lg p-4 text-sm text-gray-500 mb-8">
+                    Precos e opcoes de compra em breve.
+                  </div>
+                )}
+
+                {/* Seguranca */}
+                <div className="border-t border-gray-100 pt-6 space-y-2 text-xs text-gray-400">
+                  <p>Pagamento seguro via Stripe</p>
+                  <p>Envio para todo o Brasil com rastreamento</p>
+                  <p>Protecao UV400 garantida</p>
                 </div>
               </div>
             </div>
