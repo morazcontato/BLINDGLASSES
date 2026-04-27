@@ -31,17 +31,17 @@ export default function SucessoPage() {
             <h1 className="text-3xl font-bold mb-4">Pagamento aprovado!</h1>
 
             <p className="text-gray-500 leading-relaxed mb-6">
-              Obrigado por comprar na BLIND! Seu pedido foi recebido e sera
-              processado em breve. Voce recebera atualizacoes por e-mail.
+              Obrigado por comprar na BLIND! Seu pedido foi recebido e será
+              processado em breve. Você receberá atualizações por e-mail.
             </p>
 
             <div className="bg-gray-50 rounded-xl p-6 mb-8 text-left text-sm text-gray-500 space-y-2">
               <p>
-                <span className="font-semibold text-black">Proximo passo:</span> Vamos
-                preparar seu oculos e enviar com rastreamento completo.
+                <span className="font-semibold text-black">Próximo passo:</span> Vamos
+                preparar seu óculos e enviar com rastreamento completo.
               </p>
               <p>
-                Se tiver duvidas, entre em contato pelo nosso WhatsApp.
+                Se tiver dúvidas, entre em contato pelo nosso WhatsApp.
               </p>
             </div>
 
@@ -56,7 +56,7 @@ export default function SucessoPage() {
                 href="/"
                 className="inline-block px-7 py-3.5 border-2 border-black text-black font-semibold rounded-lg hover:bg-black hover:text-white transition-colors"
               >
-                Voltar ao inicio
+                Voltar ao início
               </Link>
             </div>
           </div>

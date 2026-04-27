@@ -34,8 +34,8 @@ export default function CarrinhoPage() {
             <h1 className="text-3xl font-bold mb-4">Pagamento cancelado</h1>
 
             <p className="text-gray-500 leading-relaxed mb-8">
-              O pagamento foi cancelado. Nenhuma cobranca foi feita.
-              Se mudou de ideia, voce pode voltar ao catalogo e escolher seu modelo.
+              O pagamento foi cancelado. Nenhuma cobrança foi feita.
+              Se mudou de ideia, você pode voltar ao catálogo e escolher seu modelo.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -43,13 +43,13 @@ export default function CarrinhoPage() {
                 href="/catalogo"
                 className="inline-block px-7 py-3.5 bg-[#4DA6FF] text-white font-semibold rounded-lg hover:bg-[#3a8fe0] transition-colors"
               >
-                Ver catalogo
+                Ver catálogo
               </Link>
               <Link
                 href="/"
                 className="inline-block px-7 py-3.5 border-2 border-black text-black font-semibold rounded-lg hover:bg-black hover:text-white transition-colors"
               >
-                Voltar ao inicio
+                Voltar ao início
               </Link>
             </div>
           </div>

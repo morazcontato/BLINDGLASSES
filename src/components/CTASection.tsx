@@ -8,9 +8,9 @@ interface CTASectionProps {
 }
 
 export default function CTASection({
-  title = "Escolha seu proximo oculos BLIND.",
-  subtitle = "Estilo, protecao e presenca em um so lugar.",
-  catalogLabel = "Ver catalogo",
+  title = "Escolha seu próximo óculos BLIND.",
+  subtitle = "Estilo, proteção e presença em um só lugar.",
+  catalogLabel = "Ver catálogo",
   whatsappLabel = "Falar no WhatsApp",
 }: CTASectionProps) {
   return (

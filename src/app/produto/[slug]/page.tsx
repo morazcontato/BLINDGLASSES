@@ -1,4 +1,7 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState, use } from "react";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -7,34 +10,29 @@ import BuyButton from "@/components/BuyButton";
 import { products } from "@/data/products";
 import { formatPrice, getWhatsAppLink } from "@/lib/utils";
 
-interface PageProps {
-  params: Promise<{ slug: string }>;
-}
+function ProductImage({ src, name, category }: { src: string; name: string; category: string }) {
+  const [imgError, setImgError] = useState(false);
+  const hasReal = src.endsWith(".webp");
 
-export async function generateStaticParams() {
-  return products.map((p) => ({ slug: p.slug }));
-}
+  if (hasReal && !imgError) {
+    return (
+      <div className="bg-white rounded-xl flex items-center justify-center min-h-[400px] p-8">
+        <Image
+          src={src}
+          alt={name}
+          width={1000}
+          height={600}
+          className="object-contain max-h-[380px] w-auto"
+          priority
+          onError={() => setImgError(true)}
+        />
+      </div>
+    );
+  }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const product = products.find((p) => p.slug === slug);
-  if (!product) return { title: "Produto nao encontrado - BLIND" };
-
-  return {
-    title: `${product.name} - BLIND Oculos de Sol`,
-    description: product.description,
-    openGraph: {
-      title: `${product.name} - BLIND`,
-      description: product.description,
-      images: ["/logo/BLINDLOGO.png"],
-    },
-  };
-}
-
-function ProductPlaceholder({ category, name }: { category: string; name: string }) {
   return (
     <div className="bg-gradient-to-b from-gray-50 to-gray-100 rounded-xl flex flex-col items-center justify-center min-h-[400px] p-10">
-      <svg viewBox="0 0 200 80" fill="none" className="w-[220px] mb-6">
+      <svg viewBox="0 0 200 80" fill="none" className="w-[220px] mb-6 opacity-30">
         {category === "wayfarer" && (
           <>
             <rect x="20" y="20" width="65" height="45" rx="6" stroke="#222" strokeWidth="2.5" fill="none" />
@@ -85,13 +83,14 @@ function ProductPlaceholder({ category, name }: { category: string; name: string
   );
 }
 
-export default async function ProdutoPage({ params }: PageProps) {
-  const { slug } = await params;
+export default function ProdutoPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = use(params);
   const product = products.find((p) => p.slug === slug);
 
   if (!product) notFound();
 
   const hasPrice = product.price !== null && product.price > 0;
+  const mainImage = product.images[0] || "";
 
   return (
     <>
@@ -100,15 +99,15 @@ export default async function ProdutoPage({ params }: PageProps) {
         <section className="pt-[120px] pb-20">
           <div className="max-w-5xl mx-auto px-5">
             <nav className="text-sm text-gray-400 mb-8">
-              <a href="/" className="hover:text-[#4DA6FF] transition-colors">Inicio</a>
+              <a href="/" className="hover:text-[#4DA6FF] transition-colors">Início</a>
               <span className="mx-2">/</span>
-              <a href="/catalogo" className="hover:text-[#4DA6FF] transition-colors">Catalogo</a>
+              <a href="/catalogo" className="hover:text-[#4DA6FF] transition-colors">Catálogo</a>
               <span className="mx-2">/</span>
               <span className="text-black">{product.name}</span>
             </nav>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <ProductPlaceholder category={product.category} name={product.name} />
+              <ProductImage src={mainImage} name={product.name} category={product.category} />
 
               <div>
                 {product.badge && (
@@ -125,22 +124,34 @@ export default async function ProdutoPage({ params }: PageProps) {
                   </span>
                 )}
 
-                <h1 className="text-3xl font-bold mb-4">{product.name}</h1>
+                <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
+                <p className="text-sm text-gray-400 mb-4">{product.type}</p>
 
                 <p className="text-gray-500 leading-relaxed mb-6">
                   {product.fullDescription}
                 </p>
 
+                {/* Bullets */}
+                {product.bullets.length > 0 && (
+                  <ul className="space-y-2 mb-6">
+                    {product.bullets.map((b) => (
+                      <li key={b} className="flex items-center gap-2 text-sm text-gray-600">
+                        <span className="w-1.5 h-1.5 bg-[#4DA6FF] rounded-full flex-shrink-0" />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
                 <div className="mb-6">
                   <p className="text-sm text-gray-400 mb-1">
-                    Categoria: {product.category.charAt(0).toUpperCase() + product.category.slice(1)}
+                    Categoria: {product.type}
                   </p>
                   {product.colors.length > 0 && (
                     <p className="text-sm text-gray-400 mb-1">
                       Cores: {product.colors.join(", ")}
                     </p>
                   )}
-                  <p className="text-sm text-gray-400 mb-1">Protecao UV400</p>
                   {product.tags.length > 0 && (
                     <div className="flex flex-wrap gap-2 mt-3">
                       {product.tags.map((tag) => (
@@ -152,7 +163,6 @@ export default async function ProdutoPage({ params }: PageProps) {
                   )}
                 </div>
 
-                {/* Preco e compra */}
                 {hasPrice ? (
                   <div className="mb-8">
                     <p className="text-3xl font-bold mb-6">
@@ -180,21 +190,20 @@ export default async function ProdutoPage({ params }: PageProps) {
                   </div>
                 ) : (
                   <div className="bg-gray-50 rounded-lg p-4 text-sm text-gray-500 mb-8">
-                    Precos e opcoes de compra em breve.
+                    Preços e opções de compra em breve.
                   </div>
                 )}
 
-                {/* Seguranca */}
                 <div className="border-t border-gray-100 pt-6 space-y-2 text-xs text-gray-400">
                   <p>Pagamento seguro via Stripe</p>
                   <p>Envio para todo o Brasil com rastreamento</p>
-                  <p>Protecao UV400 garantida</p>
+                  <p>Proteção UV400 garantida</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <CTASection title="Gostou deste modelo?" subtitle="Veja mais opcoes no nosso catalogo." />
+        <CTASection title="Gostou deste modelo?" subtitle="Veja mais opções no nosso catálogo." />
       </main>
       <Footer />
     </>

@@ -1,14 +1,14 @@
 const testimonials = [
   {
-    text: "Qualidade surpreendente pelo preco. Ja comprei dois modelos e ambos sao incriveis.",
+    text: "Qualidade surpreendente pelo preço. Já comprei dois modelos e ambos são incríveis.",
     author: "Lucas M.",
   },
   {
-    text: "Atendimento rapido pelo WhatsApp e o oculos chegou super bem embalado. Recomendo!",
+    text: "Atendimento rápido pelo WhatsApp e o óculos chegou super bem embalado. Recomendo!",
     author: "Camila R.",
   },
   {
-    text: "Design muito bonito e protecao UV de verdade. Uso todos os dias.",
+    text: "Design muito bonito e proteção UV de verdade. Uso todos os dias.",
     author: "Rafael S.",
   },
 ];

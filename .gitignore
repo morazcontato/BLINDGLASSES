@@ -42,3 +42,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# temp files
+/raw-products/
+/backup-correcao-*/
+*.mjs
+.playwright-mcp/
+blind-*.jpeg
+blind-*.png

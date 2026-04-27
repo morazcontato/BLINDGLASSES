@@ -15,21 +15,21 @@ export default function Footer() {
               className="h-8 w-auto brightness-0 invert mb-3"
             />
             <p className="text-sm text-gray-500">
-              Estilo, protecao e presenca.
+              Estilo, proteção e presença.
             </p>
           </div>
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider mb-4">
-              Navegacao
+              Navegação
             </h4>
             <a href="/" className="block text-sm text-gray-400 mb-2 hover:text-[#4DA6FF] transition-colors">
-              Inicio
+              Início
             </a>
             <a href="/catalogo" className="block text-sm text-gray-400 mb-2 hover:text-[#4DA6FF] transition-colors">
-              Catalogo
+              Catálogo
             </a>
             <a href="/#diferenciais" className="block text-sm text-gray-400 mb-2 hover:text-[#4DA6FF] transition-colors">
-              Beneficios
+              Benefícios
             </a>
             <a href="/#sobre" className="block text-sm text-gray-400 mb-2 hover:text-[#4DA6FF] transition-colors">
               Sobre

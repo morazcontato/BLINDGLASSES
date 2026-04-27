@@ -4,34 +4,34 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "Os oculos BLIND tem protecao UV?",
+    question: "Os óculos BLIND têm proteção UV?",
     answer:
-      "Sim! Todos os modelos BLIND possuem lentes com protecao UV400, bloqueando 100% dos raios UVA e UVB.",
+      "Sim! Todos os modelos BLIND possuem lentes com proteção UV400, bloqueando 100% dos raios UVA e UVB.",
   },
   {
-    question: "Como faco para comprar?",
+    question: "Como faço para comprar?",
     answer:
-      "Voce pode comprar diretamente pelo nosso WhatsApp. Basta clicar no botao 'Tenho interesse' no produto desejado e voce sera redirecionado para o atendimento.",
+      "Você pode comprar diretamente pelo nosso WhatsApp. Basta clicar no botão 'Tenho interesse' no produto desejado e você será redirecionado para o atendimento.",
   },
   {
-    question: "Voces enviam para todo o Brasil?",
+    question: "Vocês enviam para todo o Brasil?",
     answer:
-      "Sim! Enviamos para todos os estados do Brasil com rastreamento completo. O prazo varia conforme a regiao.",
+      "Sim! Enviamos para todos os estados do Brasil com rastreamento completo. O prazo varia conforme a região.",
   },
   {
     question: "Posso trocar ou devolver?",
     answer:
-      "Sim. Se o produto apresentar defeito ou voce nao ficar satisfeito, entre em contato pelo WhatsApp em ate 7 dias apos o recebimento.",
+      "Sim. Se o produto apresentar defeito ou você não ficar satisfeito, entre em contato pelo WhatsApp em até 7 dias após o recebimento.",
   },
   {
-    question: "Os precos ja estao disponiveis?",
+    question: "Os preços já estão disponíveis?",
     answer:
-      "Estamos finalizando a precificacao de alguns modelos. Os precos serao atualizados em breve. Enquanto isso, voce pode demonstrar interesse pelo WhatsApp.",
+      "Estamos finalizando a precificação de alguns modelos. Os preços serão atualizados em breve. Enquanto isso, você pode demonstrar interesse pelo WhatsApp.",
   },
   {
-    question: "Voces vendem em marketplaces?",
+    question: "Vocês vendem em marketplaces?",
     answer:
-      "Em breve estaremos disponiveis no TikTok Shop, Shopee e Mercado Livre. Fique de olho nas nossas redes sociais para novidades!",
+      "Em breve estaremos disponíveis no TikTok Shop, Shopee e Mercado Livre. Fique de olho nas nossas redes sociais para novidades!",
   },
 ];
 
@@ -70,7 +70,7 @@ export default function FAQSection() {
           Perguntas Frequentes
         </h2>
         <p className="text-center text-gray-500 mb-12 max-w-lg mx-auto">
-          Tire suas duvidas sobre a BLIND.
+          Tire suas dúvidas sobre a BLIND.
         </p>
         <div>
           {faqs.map((faq) => (

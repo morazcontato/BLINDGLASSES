@@ -6,13 +6,13 @@ const values = [
   },
   {
     icon: "\u2600\uFE0F",
-    title: "Protecao UV",
-    text: "Todas as lentes com protecao UV400. Estilo com seguranca para seus olhos.",
+    title: "Proteção UV",
+    text: "Todas as lentes com proteção UV400. Estilo com segurança para seus olhos.",
   },
   {
     icon: "\u2728",
     title: "Modelos Selecionados",
-    text: "Curadoria exclusiva. Cada modelo e escolhido a dedo para garantir qualidade.",
+    text: "Curadoria exclusiva. Cada modelo é escolhido a dedo para garantir qualidade.",
   },
 ];
 
@@ -20,22 +20,22 @@ const features = [
   {
     icon: "\uD83D\uDE9A",
     title: "Envio para todo o Brasil",
-    text: "Receba seu oculos onde voce estiver, com rastreamento completo.",
+    text: "Receba seu óculos onde você estiver, com rastreamento completo.",
   },
   {
     icon: "\uD83D\uDCAC",
     title: "Compra pelo WhatsApp",
-    text: "Atendimento direto e rapido. Tire duvidas e compre em minutos.",
+    text: "Atendimento direto e rápido. Tire dúvidas e compre em minutos.",
   },
   {
     icon: "\uD83C\uDF1F",
     title: "Curadoria de Modelos",
-    text: "Cada modelo e selecionado com criterio de qualidade e tendencia.",
+    text: "Cada modelo é selecionado com critério de qualidade e tendência.",
   },
   {
     icon: "\uD83D\uDCB0",
-    title: "Premium Acessivel",
-    text: "Visual de grife sem o preco de grife. Qualidade que cabe no bolso.",
+    title: "Premium Acessível",
+    text: "Visual de grife sem o preço de grife. Qualidade que cabe no bolso.",
   },
 ];
 
@@ -76,7 +76,7 @@ export function Features() {
           Diferenciais BLIND
         </h2>
         <p className="text-center text-gray-500 mb-12 max-w-lg mx-auto">
-          Mais do que oculos. Uma experiencia.
+          Mais do que óculos. Uma experiência.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((item) => (

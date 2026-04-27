@@ -9,14 +9,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "BLIND - Oculos de Sol com Estilo e Protecao",
+  title: "BLIND - Óculos de Sol com Estilo e Proteção",
   description:
-    "BLIND - Oculos de sol modernos, com protecao UV e design urbano. Modelos selecionados para quem quer estilo e presenca.",
-  keywords: "oculos de sol, BLIND, oculos estilosos, protecao UV, moda urbana",
+    "BLIND - Óculos de sol modernos, com proteção UV e design urbano. Modelos selecionados para quem quer estilo e presença.",
+  keywords: "óculos de sol, BLIND, óculos estilosos, proteção UV, moda urbana",
   openGraph: {
-    title: "BLIND - Oculos de Sol com Estilo e Protecao",
+    title: "BLIND - Óculos de Sol com Estilo e Proteção",
     description:
-      "Modelos selecionados de oculos de sol. Design moderno, protecao UV e preco acessivel.",
+      "Modelos selecionados de óculos de sol. Design moderno, proteção UV e preço acessível.",
     type: "website",
     images: ["/logo/BLINDLOGO.png"],
   },

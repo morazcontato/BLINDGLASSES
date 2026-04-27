@@ -6,13 +6,13 @@ import CTASection from "@/components/CTASection";
 import { products } from "@/data/products";
 
 export const metadata: Metadata = {
-  title: "Catalogo - BLIND Oculos de Sol",
+  title: "Catálogo - BLIND Óculos de Sol",
   description:
-    "Confira todos os modelos de oculos de sol BLIND. Design moderno, protecao UV e preco acessivel.",
+    "Confira todos os modelos de óculos de sol BLIND. Design moderno, proteção UV e preço acessível.",
   openGraph: {
-    title: "Catalogo - BLIND Oculos de Sol",
+    title: "Catálogo - BLIND Óculos de Sol",
     description:
-      "Confira todos os modelos de oculos de sol BLIND. Design moderno, protecao UV e preco acessivel.",
+      "Confira todos os modelos de óculos de sol BLIND. Design moderno, proteção UV e preço acessível.",
   },
 };
 
@@ -28,10 +28,10 @@ export default function CatalogoPage() {
         <section className="pt-[120px] pb-20">
           <div className="max-w-7xl mx-auto px-5">
             <h1 className="text-3xl md:text-4xl font-bold text-center mb-4">
-              Catalogo BLIND
+              Catálogo BLIND
             </h1>
             <p className="text-center text-gray-500 mb-12 max-w-lg mx-auto">
-              Todos os modelos selecionados para voce.
+              Todos os modelos selecionados para você.
             </p>
 
             {/* Filtro por categoria */}
