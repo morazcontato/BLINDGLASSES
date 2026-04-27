@@ -28,7 +28,7 @@ export default function Header() {
           >
             <li>
               <a
-                href="#hero"
+                href="/"
                 className="text-sm font-medium hover:text-[#4DA6FF] transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
@@ -37,7 +37,7 @@ export default function Header() {
             </li>
             <li>
               <a
-                href="#catalogo"
+                href="/catalogo"
                 className="text-sm font-medium hover:text-[#4DA6FF] transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
@@ -46,7 +46,7 @@ export default function Header() {
             </li>
             <li>
               <a
-                href="#diferenciais"
+                href="/#diferenciais"
                 className="text-sm font-medium hover:text-[#4DA6FF] transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
@@ -55,7 +55,7 @@ export default function Header() {
             </li>
             <li>
               <a
-                href="#sobre"
+                href="/#sobre"
                 className="text-sm font-medium hover:text-[#4DA6FF] transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
@@ -64,16 +64,16 @@ export default function Header() {
             </li>
             <li>
               <a
-                href="#contato"
+                href="/#faq"
                 className="text-sm font-medium hover:text-[#4DA6FF] transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
-                Contato
+                FAQ
               </a>
             </li>
             <li>
               <a
-                href="#catalogo"
+                href="/catalogo"
                 className="text-sm font-semibold bg-[#4DA6FF] text-white px-5 py-2.5 rounded-lg hover:bg-[#3a8fe0] transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
