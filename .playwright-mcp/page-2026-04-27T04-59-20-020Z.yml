@@ -1,0 +1,235 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "BLIND" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+        - img "BLIND" [ref=e5]
+      - navigation [ref=e6]:
+        - list [ref=e7]:
+          - listitem [ref=e8]:
+            - link "Inicio" [ref=e9] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e10]:
+            - link "Catalogo" [ref=e11] [cursor=pointer]:
+              - /url: /catalogo
+          - listitem [ref=e12]:
+            - link "Beneficios" [ref=e13] [cursor=pointer]:
+              - /url: /#diferenciais
+          - listitem [ref=e14]:
+            - link "Sobre" [ref=e15] [cursor=pointer]:
+              - /url: /#sobre
+          - listitem [ref=e16]:
+            - link "FAQ" [ref=e17] [cursor=pointer]:
+              - /url: /#faq
+          - listitem [ref=e18]:
+            - link "Ver catalogo" [ref=e19] [cursor=pointer]:
+              - /url: /catalogo
+  - main [ref=e20]:
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - heading "Oculos de sol com estilo, protecao e presenca." [level=1] [ref=e24]
+        - paragraph [ref=e25]: A BLIND nasce para quem quer elevar o visual com pecas modernas, versateis e acessiveis.
+        - generic [ref=e26]:
+          - link "Ver modelos" [ref=e27] [cursor=pointer]:
+            - /url: "#catalogo"
+          - link "Falar no WhatsApp" [ref=e28] [cursor=pointer]:
+            - /url: https://wa.me/5500000000000?text=Ola!%20Gostaria%20de%20saber%20mais%20sobre%20os%20oculos%20BLIND.
+      - img "BLIND Oculos de Sol" [ref=e30]
+    - generic [ref=e32]:
+      - heading "Por que escolher BLIND?" [level=2] [ref=e33]
+      - paragraph [ref=e34]: Design pensado para quem vive com estilo.
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e37]: ⚫
+          - heading "Estilo Urbano" [level=3] [ref=e38]
+          - paragraph [ref=e39]: Modelos curados com design moderno que combinam com qualquer visual.
+        - generic [ref=e40]:
+          - generic [ref=e41]: ☀️
+          - heading "Protecao UV" [level=3] [ref=e42]
+          - paragraph [ref=e43]: Todas as lentes com protecao UV400. Estilo com seguranca para seus olhos.
+        - generic [ref=e44]:
+          - generic [ref=e45]: ✨
+          - heading "Modelos Selecionados" [level=3] [ref=e46]
+          - paragraph [ref=e47]: Curadoria exclusiva. Cada modelo e escolhido a dedo para garantir qualidade.
+    - generic [ref=e49]:
+      - heading "Destaques" [level=2] [ref=e50]
+      - paragraph [ref=e51]: Modelos selecionados para voce.
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - link "Mais vendido BLIND Classic Black" [ref=e54] [cursor=pointer]:
+            - /url: /produto/blind-classic-black
+            - generic [ref=e55]:
+              - generic [ref=e56]: Mais vendido
+              - generic [ref=e57]:
+                - img [ref=e58]
+                - paragraph [ref=e64]: BLIND Classic Black
+          - generic [ref=e65]:
+            - link "BLIND Classic Black" [ref=e66] [cursor=pointer]:
+              - /url: /produto/blind-classic-black
+              - heading "BLIND Classic Black" [level=3] [ref=e67]
+            - paragraph [ref=e68]: Oculos de sol estilo wayfarer classico, com design atemporal, armacao preta e visual urbano. Ideal para uso diario, praia, cidade e looks casuais. Protecao UV400.
+            - paragraph [ref=e69]: "Cores: Preto"
+            - paragraph [ref=e71]: R$ 159,90R$ 129,90
+            - button "Comprar agora" [ref=e72]
+        - generic [ref=e73]:
+          - link "Premium BLIND Aviator Gold" [ref=e74] [cursor=pointer]:
+            - /url: /produto/blind-aviator-gold
+            - generic [ref=e75]:
+              - generic [ref=e76]: Premium
+              - generic [ref=e77]:
+                - img [ref=e78]
+                - paragraph [ref=e84]: BLIND Aviator Gold
+          - generic [ref=e85]:
+            - link "BLIND Aviator Gold" [ref=e86] [cursor=pointer]:
+              - /url: /produto/blind-aviator-gold
+              - heading "BLIND Aviator Gold" [level=3] [ref=e87]
+            - paragraph [ref=e88]: Oculos de sol estilo aviador, com armacao dourada e visual premium. Modelo versatil, inspirado no estilo piloto, ideal para praia, viagens e lifestyle. Protecao UV400.
+            - paragraph [ref=e89]: "Cores: Dourado/Preto, Dourado/Verde"
+            - paragraph [ref=e91]: R$ 149,90
+            - button "Comprar agora" [ref=e92]
+        - generic [ref=e93]:
+          - link "Novo BLIND Retro Round" [ref=e94] [cursor=pointer]:
+            - /url: /produto/blind-retro-round
+            - generic [ref=e95]:
+              - generic [ref=e96]: Novo
+              - generic [ref=e97]:
+                - img [ref=e98]
+                - paragraph [ref=e104]: BLIND Retro Round
+          - generic [ref=e105]:
+            - link "BLIND Retro Round" [ref=e106] [cursor=pointer]:
+              - /url: /produto/blind-retro-round
+              - heading "BLIND Retro Round" [level=3] [ref=e107]
+            - paragraph [ref=e108]: Oculos de sol redondo retro, com estetica vintage e moderna ao mesmo tempo. Ideal para quem busca um visual alternativo, jovem e estiloso. Protecao UV400.
+            - paragraph [ref=e109]: "Cores: Tartaruga, Preto"
+            - paragraph [ref=e111]: R$ 119,90
+            - button "Comprar agora" [ref=e112]
+        - generic [ref=e113]:
+          - link "BLIND Bold Square" [ref=e114] [cursor=pointer]:
+            - /url: /produto/blind-bold-square
+            - generic [ref=e116]:
+              - img [ref=e117]
+              - paragraph [ref=e123]: BLIND Bold Square
+          - generic [ref=e124]:
+            - link "BLIND Bold Square" [ref=e125] [cursor=pointer]:
+              - /url: /produto/blind-bold-square
+              - heading "BLIND Bold Square" [level=3] [ref=e126]
+            - paragraph [ref=e127]: Oculos de sol quadrado oversized, com presenca forte e visual fashion. Modelo com estetica premium, ideal para looks marcantes e lifestyle urbano. Protecao UV400.
+            - paragraph [ref=e128]: "Cores: Preto Fosco, Marrom"
+            - paragraph [ref=e130]: R$ 139,90
+            - button "Comprar agora" [ref=e131]
+        - generic [ref=e132]:
+          - link "Novo BLIND Sport Vision" [ref=e133] [cursor=pointer]:
+            - /url: /produto/blind-sport-vision
+            - generic [ref=e134]:
+              - generic [ref=e135]: Novo
+              - generic [ref=e136]:
+                - img [ref=e137]
+                - paragraph [ref=e141]: BLIND Sport Vision
+          - generic [ref=e142]:
+            - link "BLIND Sport Vision" [ref=e143] [cursor=pointer]:
+              - /url: /produto/blind-sport-vision
+              - heading "BLIND Sport Vision" [level=3] [ref=e144]
+            - paragraph [ref=e145]: Oculos de sol esportivo, com visual dinamico e moderno. Ideal para corrida, bike, praia, atividades ao ar livre e uso casual esportivo. Protecao UV400.
+            - paragraph [ref=e146]: "Cores: Preto/Azul, Preto/Vermelho"
+            - paragraph [ref=e148]: R$ 129,90
+            - button "Comprar agora" [ref=e149]
+      - link "Ver catalogo completo" [ref=e151] [cursor=pointer]:
+        - /url: /catalogo
+    - generic [ref=e153]:
+      - heading "Diferenciais BLIND" [level=2] [ref=e154]
+      - paragraph [ref=e155]: Mais do que oculos. Uma experiencia.
+      - generic [ref=e156]:
+        - generic [ref=e157]:
+          - generic [ref=e158]: 🚚
+          - heading "Envio para todo o Brasil" [level=3] [ref=e159]
+          - paragraph [ref=e160]: Receba seu oculos onde voce estiver, com rastreamento completo.
+        - generic [ref=e161]:
+          - generic [ref=e162]: 💬
+          - heading "Compra pelo WhatsApp" [level=3] [ref=e163]
+          - paragraph [ref=e164]: Atendimento direto e rapido. Tire duvidas e compre em minutos.
+        - generic [ref=e165]:
+          - generic [ref=e166]: 🌟
+          - heading "Curadoria de Modelos" [level=3] [ref=e167]
+          - paragraph [ref=e168]: Cada modelo e selecionado com criterio de qualidade e tendencia.
+        - generic [ref=e169]:
+          - generic [ref=e170]: 💰
+          - heading "Premium Acessivel" [level=3] [ref=e171]
+          - paragraph [ref=e172]: Visual de grife sem o preco de grife. Qualidade que cabe no bolso.
+    - generic [ref=e174]:
+      - heading "O que dizem sobre a BLIND" [level=2] [ref=e175]
+      - paragraph [ref=e176]: Quem usa, recomenda.
+      - generic [ref=e177]:
+        - generic [ref=e178]:
+          - generic [ref=e179]: ★★★★★
+          - paragraph [ref=e180]: “Qualidade surpreendente pelo preco. Ja comprei dois modelos e ambos sao incriveis.”
+          - paragraph [ref=e181]: "- Lucas M."
+        - generic [ref=e182]:
+          - generic [ref=e183]: ★★★★★
+          - paragraph [ref=e184]: “Atendimento rapido pelo WhatsApp e o oculos chegou super bem embalado. Recomendo!”
+          - paragraph [ref=e185]: "- Camila R."
+        - generic [ref=e186]:
+          - generic [ref=e187]: ★★★★★
+          - paragraph [ref=e188]: “Design muito bonito e protecao UV de verdade. Uso todos os dias.”
+          - paragraph [ref=e189]: "- Rafael S."
+    - generic [ref=e191]:
+      - heading "Sobre a BLIND" [level=2] [ref=e192]
+      - generic [ref=e193]:
+        - paragraph [ref=e194]: A BLIND nasceu da vontade de democratizar o acesso a oculos de sol com design premium. Acreditamos que estilo nao precisa custar caro e que todo mundo merece proteger os olhos com um acessorio que eleva o visual.
+        - paragraph [ref=e195]: Cada modelo da nossa colecao e cuidadosamente selecionado, priorizando qualidade dos materiais, protecao UV real e tendencias de moda urbana. Nosso compromisso e entregar pecas que voce vai querer usar todos os dias.
+    - generic [ref=e197]:
+      - heading "Perguntas Frequentes" [level=2] [ref=e198]
+      - paragraph [ref=e199]: Tire suas duvidas sobre a BLIND.
+      - generic [ref=e200]:
+        - button "Os oculos BLIND tem protecao UV? +" [ref=e202]:
+          - generic [ref=e203]: Os oculos BLIND tem protecao UV?
+          - generic [ref=e204]: +
+        - button "Como faco para comprar? +" [ref=e206]:
+          - generic [ref=e207]: Como faco para comprar?
+          - generic [ref=e208]: +
+        - button "Voces enviam para todo o Brasil? +" [ref=e210]:
+          - generic [ref=e211]: Voces enviam para todo o Brasil?
+          - generic [ref=e212]: +
+        - button "Posso trocar ou devolver? +" [ref=e214]:
+          - generic [ref=e215]: Posso trocar ou devolver?
+          - generic [ref=e216]: +
+        - button "Os precos ja estao disponiveis? +" [ref=e218]:
+          - generic [ref=e219]: Os precos ja estao disponiveis?
+          - generic [ref=e220]: +
+        - button "Voces vendem em marketplaces? +" [ref=e222]:
+          - generic [ref=e223]: Voces vendem em marketplaces?
+          - generic [ref=e224]: +
+    - generic [ref=e226]:
+      - heading "Escolha seu proximo oculos BLIND." [level=2] [ref=e227]
+      - paragraph [ref=e228]: Estilo, protecao e presenca em um so lugar.
+      - generic [ref=e229]:
+        - link "Ver catalogo" [ref=e230] [cursor=pointer]:
+          - /url: /catalogo
+        - link "Falar no WhatsApp" [ref=e231] [cursor=pointer]:
+          - /url: https://wa.me/5500000000000?text=Ola!%20Gostaria%20de%20saber%20mais%20sobre%20os%20oculos%20BLIND.
+  - contentinfo [ref=e232]:
+    - generic [ref=e233]:
+      - generic [ref=e234]:
+        - generic [ref=e235]:
+          - img "BLIND" [ref=e236]
+          - paragraph [ref=e237]: Estilo, protecao e presenca.
+        - generic [ref=e238]:
+          - heading "Navegacao" [level=4] [ref=e239]
+          - link "Inicio" [ref=e240] [cursor=pointer]:
+            - /url: /
+          - link "Catalogo" [ref=e241] [cursor=pointer]:
+            - /url: /catalogo
+          - link "Beneficios" [ref=e242] [cursor=pointer]:
+            - /url: /#diferenciais
+          - link "Sobre" [ref=e243] [cursor=pointer]:
+            - /url: /#sobre
+          - link "FAQ" [ref=e244] [cursor=pointer]:
+            - /url: /#faq
+          - link "Contato" [ref=e245] [cursor=pointer]:
+            - /url: /#contato
+        - generic [ref=e246]:
+          - heading "Redes Sociais" [level=4] [ref=e247]
+          - link "Instagram" [ref=e248] [cursor=pointer]:
+            - /url: https://instagram.com/blind.glasses
+          - link "WhatsApp" [ref=e249] [cursor=pointer]:
+            - /url: https://wa.me/5500000000000?text=Ola!%20Gostaria%20de%20saber%20mais%20sobre%20os%20oculos%20BLIND.
+      - paragraph [ref=e251]: © 2026 BLIND. Todos os direitos reservados.

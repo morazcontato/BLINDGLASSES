@@ -1,0 +1,98 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "BLIND" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+        - img "BLIND" [ref=e5]
+      - navigation [ref=e6]:
+        - list [ref=e7]:
+          - listitem [ref=e8]:
+            - link "Inicio" [ref=e9] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e10]:
+            - link "Catalogo" [ref=e11] [cursor=pointer]:
+              - /url: /catalogo
+          - listitem [ref=e12]:
+            - link "Beneficios" [ref=e13] [cursor=pointer]:
+              - /url: /#diferenciais
+          - listitem [ref=e14]:
+            - link "Sobre" [ref=e15] [cursor=pointer]:
+              - /url: /#sobre
+          - listitem [ref=e16]:
+            - link "FAQ" [ref=e17] [cursor=pointer]:
+              - /url: /#faq
+          - listitem [ref=e18]:
+            - link "Ver catalogo" [ref=e19] [cursor=pointer]:
+              - /url: /catalogo
+  - main [ref=e20]:
+    - generic [ref=e22]:
+      - navigation [ref=e23]:
+        - link "Inicio" [ref=e24] [cursor=pointer]:
+          - /url: /
+        - text: /
+        - link "Catalogo" [ref=e25] [cursor=pointer]:
+          - /url: /catalogo
+        - text: /BLIND Classic Black
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - img [ref=e28]
+          - paragraph [ref=e34]: BLIND Classic Black
+        - generic [ref=e35]:
+          - generic [ref=e36]: Mais vendido
+          - heading "BLIND Classic Black" [level=1] [ref=e37]
+          - paragraph [ref=e38]: O BLIND Classic Black traz o estilo wayfarer que nunca sai de moda. Armacao preta solida com acabamento premium, lentes com protecao UV400 e design que combina com qualquer ocasiao. Do escritorio a praia, do casual ao sofisticado — este e o oculos que acompanha voce em todos os momentos.
+          - generic [ref=e39]:
+            - paragraph [ref=e40]: "Categoria: Wayfarer"
+            - paragraph [ref=e41]: "Cores: Preto"
+            - paragraph [ref=e42]: Protecao UV400
+            - generic [ref=e43]:
+              - generic [ref=e44]: classico
+              - generic [ref=e45]: wayfarer
+              - generic [ref=e46]: urbano
+              - generic [ref=e47]: unissex
+          - generic [ref=e48]:
+            - paragraph [ref=e49]: R$ 159,90R$ 129,90
+            - generic [ref=e50]:
+              - button "Comprar agora" [ref=e51]
+              - link "Comprar via WhatsApp" [ref=e52] [cursor=pointer]:
+                - /url: https://wa.me/5500000000000?text=Ola!%20Tenho%20interesse%20no%20modelo%20BLIND%20Classic%20Black%20(SKU%3A%20BLIND-CLB-001).%20Poderia%20me%20enviar%20mais%20informacoes%3F
+          - generic [ref=e53]:
+            - paragraph [ref=e54]: Pagamento seguro via Stripe
+            - paragraph [ref=e55]: Envio para todo o Brasil com rastreamento
+            - paragraph [ref=e56]: Protecao UV400 garantida
+    - generic [ref=e58]:
+      - heading "Gostou deste modelo?" [level=2] [ref=e59]
+      - paragraph [ref=e60]: Veja mais opcoes no nosso catalogo.
+      - generic [ref=e61]:
+        - link "Ver catalogo" [ref=e62] [cursor=pointer]:
+          - /url: /catalogo
+        - link "Falar no WhatsApp" [ref=e63] [cursor=pointer]:
+          - /url: https://wa.me/5500000000000?text=Ola!%20Gostaria%20de%20saber%20mais%20sobre%20os%20oculos%20BLIND.
+  - contentinfo [ref=e64]:
+    - generic [ref=e65]:
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - img "BLIND" [ref=e68]
+          - paragraph [ref=e69]: Estilo, protecao e presenca.
+        - generic [ref=e70]:
+          - heading "Navegacao" [level=4] [ref=e71]
+          - link "Inicio" [ref=e72] [cursor=pointer]:
+            - /url: /
+          - link "Catalogo" [ref=e73] [cursor=pointer]:
+            - /url: /catalogo
+          - link "Beneficios" [ref=e74] [cursor=pointer]:
+            - /url: /#diferenciais
+          - link "Sobre" [ref=e75] [cursor=pointer]:
+            - /url: /#sobre
+          - link "FAQ" [ref=e76] [cursor=pointer]:
+            - /url: /#faq
+          - link "Contato" [ref=e77] [cursor=pointer]:
+            - /url: /#contato
+        - generic [ref=e78]:
+          - heading "Redes Sociais" [level=4] [ref=e79]
+          - link "Instagram" [ref=e80] [cursor=pointer]:
+            - /url: https://instagram.com/blind.glasses
+          - link "WhatsApp" [ref=e81] [cursor=pointer]:
+            - /url: https://wa.me/5500000000000?text=Ola!%20Gostaria%20de%20saber%20mais%20sobre%20os%20oculos%20BLIND.
+      - paragraph [ref=e83]: © 2026 BLIND. Todos os direitos reservados.
+  - alert [ref=e84]

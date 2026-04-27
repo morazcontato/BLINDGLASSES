@@ -1,0 +1,152 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "BLIND" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+        - img "BLIND" [ref=e5]
+      - navigation [ref=e6]:
+        - list [ref=e7]:
+          - listitem [ref=e8]:
+            - link "Inicio" [ref=e9] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e10]:
+            - link "Catalogo" [ref=e11] [cursor=pointer]:
+              - /url: /catalogo
+          - listitem [ref=e12]:
+            - link "Beneficios" [ref=e13] [cursor=pointer]:
+              - /url: /#diferenciais
+          - listitem [ref=e14]:
+            - link "Sobre" [ref=e15] [cursor=pointer]:
+              - /url: /#sobre
+          - listitem [ref=e16]:
+            - link "FAQ" [ref=e17] [cursor=pointer]:
+              - /url: /#faq
+          - listitem [ref=e18]:
+            - link "Ver catalogo" [ref=e19] [cursor=pointer]:
+              - /url: /catalogo
+  - main [ref=e20]:
+    - generic [ref=e22]:
+      - heading "Catalogo BLIND" [level=1] [ref=e23]
+      - paragraph [ref=e24]: Todos os modelos selecionados para voce.
+      - generic [ref=e25]:
+        - generic [ref=e26]: Todos
+        - generic [ref=e27] [cursor=pointer]: Wayfarer
+        - generic [ref=e28] [cursor=pointer]: Aviator
+        - generic [ref=e29] [cursor=pointer]: Redondo
+        - generic [ref=e30] [cursor=pointer]: Quadrado
+        - generic [ref=e31] [cursor=pointer]: Esportivo
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - link "Mais vendido BLIND Classic Black" [ref=e34] [cursor=pointer]:
+            - /url: /produto/blind-classic-black
+            - generic [ref=e35]:
+              - generic [ref=e36]: Mais vendido
+              - generic [ref=e37]:
+                - img [ref=e38]
+                - paragraph [ref=e44]: BLIND Classic Black
+          - generic [ref=e45]:
+            - link "BLIND Classic Black" [ref=e46] [cursor=pointer]:
+              - /url: /produto/blind-classic-black
+              - heading "BLIND Classic Black" [level=3] [ref=e47]
+            - paragraph [ref=e48]: Oculos de sol estilo wayfarer classico, com design atemporal, armacao preta e visual urbano. Ideal para uso diario, praia, cidade e looks casuais. Protecao UV400.
+            - paragraph [ref=e49]: "Cores: Preto"
+            - paragraph [ref=e51]: R$ 159,90R$ 129,90
+            - button "Comprar agora" [ref=e52]
+        - generic [ref=e53]:
+          - link "Premium BLIND Aviator Gold" [ref=e54] [cursor=pointer]:
+            - /url: /produto/blind-aviator-gold
+            - generic [ref=e55]:
+              - generic [ref=e56]: Premium
+              - generic [ref=e57]:
+                - img [ref=e58]
+                - paragraph [ref=e64]: BLIND Aviator Gold
+          - generic [ref=e65]:
+            - link "BLIND Aviator Gold" [ref=e66] [cursor=pointer]:
+              - /url: /produto/blind-aviator-gold
+              - heading "BLIND Aviator Gold" [level=3] [ref=e67]
+            - paragraph [ref=e68]: Oculos de sol estilo aviador, com armacao dourada e visual premium. Modelo versatil, inspirado no estilo piloto, ideal para praia, viagens e lifestyle. Protecao UV400.
+            - paragraph [ref=e69]: "Cores: Dourado/Preto, Dourado/Verde"
+            - paragraph [ref=e71]: R$ 149,90
+            - button "Comprar agora" [ref=e72]
+        - generic [ref=e73]:
+          - link "Novo BLIND Retro Round" [ref=e74] [cursor=pointer]:
+            - /url: /produto/blind-retro-round
+            - generic [ref=e75]:
+              - generic [ref=e76]: Novo
+              - generic [ref=e77]:
+                - img [ref=e78]
+                - paragraph [ref=e84]: BLIND Retro Round
+          - generic [ref=e85]:
+            - link "BLIND Retro Round" [ref=e86] [cursor=pointer]:
+              - /url: /produto/blind-retro-round
+              - heading "BLIND Retro Round" [level=3] [ref=e87]
+            - paragraph [ref=e88]: Oculos de sol redondo retro, com estetica vintage e moderna ao mesmo tempo. Ideal para quem busca um visual alternativo, jovem e estiloso. Protecao UV400.
+            - paragraph [ref=e89]: "Cores: Tartaruga, Preto"
+            - paragraph [ref=e91]: R$ 119,90
+            - button "Comprar agora" [ref=e92]
+        - generic [ref=e93]:
+          - link "BLIND Bold Square" [ref=e94] [cursor=pointer]:
+            - /url: /produto/blind-bold-square
+            - generic [ref=e96]:
+              - img [ref=e97]
+              - paragraph [ref=e103]: BLIND Bold Square
+          - generic [ref=e104]:
+            - link "BLIND Bold Square" [ref=e105] [cursor=pointer]:
+              - /url: /produto/blind-bold-square
+              - heading "BLIND Bold Square" [level=3] [ref=e106]
+            - paragraph [ref=e107]: Oculos de sol quadrado oversized, com presenca forte e visual fashion. Modelo com estetica premium, ideal para looks marcantes e lifestyle urbano. Protecao UV400.
+            - paragraph [ref=e108]: "Cores: Preto Fosco, Marrom"
+            - paragraph [ref=e110]: R$ 139,90
+            - button "Comprar agora" [ref=e111]
+        - generic [ref=e112]:
+          - link "Novo BLIND Sport Vision" [ref=e113] [cursor=pointer]:
+            - /url: /produto/blind-sport-vision
+            - generic [ref=e114]:
+              - generic [ref=e115]: Novo
+              - generic [ref=e116]:
+                - img [ref=e117]
+                - paragraph [ref=e121]: BLIND Sport Vision
+          - generic [ref=e122]:
+            - link "BLIND Sport Vision" [ref=e123] [cursor=pointer]:
+              - /url: /produto/blind-sport-vision
+              - heading "BLIND Sport Vision" [level=3] [ref=e124]
+            - paragraph [ref=e125]: Oculos de sol esportivo, com visual dinamico e moderno. Ideal para corrida, bike, praia, atividades ao ar livre e uso casual esportivo. Protecao UV400.
+            - paragraph [ref=e126]: "Cores: Preto/Azul, Preto/Vermelho"
+            - paragraph [ref=e128]: R$ 129,90
+            - button "Comprar agora" [ref=e129]
+    - generic [ref=e131]:
+      - heading "Escolha seu proximo oculos BLIND." [level=2] [ref=e132]
+      - paragraph [ref=e133]: Estilo, protecao e presenca em um so lugar.
+      - generic [ref=e134]:
+        - link "Ver catalogo" [ref=e135] [cursor=pointer]:
+          - /url: /catalogo
+        - link "Falar no WhatsApp" [ref=e136] [cursor=pointer]:
+          - /url: https://wa.me/5500000000000?text=Ola!%20Gostaria%20de%20saber%20mais%20sobre%20os%20oculos%20BLIND.
+  - contentinfo [ref=e137]:
+    - generic [ref=e138]:
+      - generic [ref=e139]:
+        - generic [ref=e140]:
+          - img "BLIND" [ref=e141]
+          - paragraph [ref=e142]: Estilo, protecao e presenca.
+        - generic [ref=e143]:
+          - heading "Navegacao" [level=4] [ref=e144]
+          - link "Inicio" [ref=e145] [cursor=pointer]:
+            - /url: /
+          - link "Catalogo" [ref=e146] [cursor=pointer]:
+            - /url: /catalogo
+          - link "Beneficios" [ref=e147] [cursor=pointer]:
+            - /url: /#diferenciais
+          - link "Sobre" [ref=e148] [cursor=pointer]:
+            - /url: /#sobre
+          - link "FAQ" [ref=e149] [cursor=pointer]:
+            - /url: /#faq
+          - link "Contato" [ref=e150] [cursor=pointer]:
+            - /url: /#contato
+        - generic [ref=e151]:
+          - heading "Redes Sociais" [level=4] [ref=e152]
+          - link "Instagram" [ref=e153] [cursor=pointer]:
+            - /url: https://instagram.com/blind.glasses
+          - link "WhatsApp" [ref=e154] [cursor=pointer]:
+            - /url: https://wa.me/5500000000000?text=Ola!%20Gostaria%20de%20saber%20mais%20sobre%20os%20oculos%20BLIND.
+      - paragraph [ref=e156]: © 2026 BLIND. Todos os direitos reservados.
+  - alert [ref=e157]
